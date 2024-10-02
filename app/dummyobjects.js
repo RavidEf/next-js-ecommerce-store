@@ -1,35 +1,40 @@
 // import 'server-only';
 
-const dummyObj = [
+export const dummyObj = [
   {
     id: 1,
-    firstName: 'Brush',
-    type: 'Cat',
-    accessory: 'House',
+    firstName: 'Fluffy Bird',
+    imageName: 'bird',
+    type: 'Cat-toy',
+    description: 'Fluffy brid toy that cats love to play with',
   },
   {
     id: 2,
-    firstName: 'Broom',
-    type: 'Capybaras',
-    accessory: 'Car',
+    firstName: 'Bouncy ball',
+    imageName: 'bouncy',
+    type: 'Cat-toy',
+    description: 'Fluffy brid toy that cats love to play with',
   },
   {
     id: 3,
-    firstName: 'Jojo',
-    type: 'Dog',
-    accessory: 'Bike',
+    firstName: 'Exercise wheel',
+    imageName: 'wheel',
+    type: 'Cat-toy',
+    description: 'Fluffy brid toy that cats love to play with',
   },
   {
     id: 4,
-    firstName: 'Macca',
-    type: 'Elephant',
-    accessory: 'Key',
+    firstName: 'Scratch bed',
+    imageName: 'bed',
+    type: 'Cat-toy',
+    description: 'Fluffy brid toy that cats love to play with',
   },
   {
     id: 5,
-    firstName: 'Fro',
-    type: 'Duck',
-    accessory: 'Motor',
+    firstName: 'Laser pointer',
+    imageName: 'laser',
+    type: 'Cat-toy',
+    description: 'Fluffy brid toy that cats love to play with',
   },
 ];
 

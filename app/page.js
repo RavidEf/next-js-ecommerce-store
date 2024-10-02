@@ -4,11 +4,7 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <div>
-      <header>
-        <nav>This is our header</nav>
-      </header>
-
-      <div>Hello world!</div>
+      <div>Hello world! Welcome to the the Catto store</div>
     </div>
   );
 }

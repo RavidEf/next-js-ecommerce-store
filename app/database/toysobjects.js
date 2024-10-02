@@ -38,6 +38,10 @@ export const dummyObj = [
   },
 ];
 
-/* export function getAnimals() {
-  return animals;
-} */
+export function getToys() {
+  return dummyObj;
+}
+
+export function getToy(id) {
+  return dummyObj.find((toy) => toy.id === id);
+}

@@ -7,6 +7,7 @@ export default function Header() {
         <nav>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/toys">Toys</Link>
           <Link href="/Cart">Cart Icon</Link>
         </nav>
       </div>

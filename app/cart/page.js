@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const metadata = {
   title: 'Cart',
   description: 'The checkout page for the Cattos store',

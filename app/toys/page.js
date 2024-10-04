@@ -14,7 +14,7 @@ export default function ToysPage() {
 
   return (
     <div>
-      <h1>Hello world! Welcome to the the Catto store</h1>
+      <h1>The full Catto selection</h1>
       <h3>Here are the products you can purchase in this store</h3>
       <br />
       <br />
@@ -24,15 +24,17 @@ export default function ToysPage() {
         {toys.map((toy) => {
           return (
             <div key={`toys-${toy.id}`}>
-              <div>{toy.firstName}</div>
-              <Image
-                src={`/images/${toy.imageName.toLowerCase()}.jpg`}
-                alt={toy.firstName}
-                width={200}
-                height={200}
-              />
-              <div>{toy.description}</div>
-              <hr />
+              <Link href={`/toys/${toy.id}`}>
+                <div>{toy.firstName}</div>
+                <Image
+                  src={`/images/${toy.imageName.toLowerCase()}.jpg`}
+                  alt={toy.firstName}
+                  width={200}
+                  height={200}
+                />
+                <div>{toy.description}</div>
+                <hr />
+              </Link>
             </div>
           );
         })}

@@ -7,6 +7,7 @@ export const dummyObj = [
     imageName: 'bird',
     type: 'Cat-toy',
     description: 'Fluffy brid toy that cats love to play with',
+    price: 3,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const dummyObj = [
     imageName: 'bouncy',
     type: 'Cat-toy',
     description: 'Fluffy brid toy that cats love to play with',
+    price: 3,
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const dummyObj = [
     imageName: 'wheel',
     type: 'Cat-toy',
     description: 'Fluffy brid toy that cats love to play with',
+    price: 3,
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const dummyObj = [
     imageName: 'bed',
     type: 'Cat-toy',
     description: 'Fluffy brid toy that cats love to play with',
+    price: 3,
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ export const dummyObj = [
     imageName: 'laser',
     type: 'Cat-toy',
     description: 'Fluffy brid toy that cats love to play with',
+    price: 3,
   },
 ];
 

@@ -8,7 +8,7 @@ export default function Header() {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/toys">Toys</Link>
-          <Link href="/Cart">Cart Icon</Link>
+          <Link href="/cart">Cart Icon</Link>
         </nav>
       </div>
     </header>

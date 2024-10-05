@@ -1,3 +1,4 @@
+import './toys.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -23,18 +24,19 @@ export default function ToysPage() {
         <h2>Most wanted cat toys</h2>
         {toys.map((toy) => {
           return (
-            <div key={`toys-${toy.id}`}>
-              <Link href={`/toys/${toy.id}`}>
-                <div>{toy.firstName}</div>
-                <Image
-                  src={`/images/${toy.imageName.toLowerCase()}.jpg`}
-                  alt={toy.firstName}
-                  width={200}
-                  height={200}
-                />
+            <div className="toys-container" key={`toys-${toy.id}`}>
+              <div className="toys-block">
+                <Link href={`/toys/${toy.id}`}>
+                  <div>{toy.firstName}</div>
+                  <Image
+                    src={`/images/${toy.imageName.toLowerCase()}.jpg`}
+                    alt={toy.firstName}
+                    width={75}
+                    height={75}
+                  />
+                </Link>
                 <div>{toy.description}</div>
-                <hr />
-              </Link>
+              </div>
             </div>
           );
         })}

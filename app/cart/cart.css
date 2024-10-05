@@ -6,6 +6,10 @@
   padding: 1rem;
 }
 
+.cart-container > div {
+  padding: 1rem;
+}
+
 .cart-buttons {
   display: flex;
   flex-direction: row;

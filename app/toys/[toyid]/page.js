@@ -1,13 +1,9 @@
-'use client';
-
 import Image from 'next/image';
-import React, { useState } from 'react';
+import FormAddToCart from '../../componenets/addtocartform';
 import { notFound } from '../../componenets/notfound';
 import { getToy } from '../../database/toysobjects';
 
 export default async function SingleToyPage(props) {
-  const [quantity, setQuantity] = useState(0);
-
   console.log(props);
 
   const toy = getToy(Number((await props.params).toyid));
@@ -16,10 +12,6 @@ export default async function SingleToyPage(props) {
 
   if (!toy) {
     return notFound();
-  }
-
-  function handelSubmit(event) {
-    event.preventDefault();
   }
 
   return (
@@ -40,10 +32,7 @@ export default async function SingleToyPage(props) {
       <p>Item price: {toy.price}€</p>
       <div>{toy.description}</div>
       <div>
-        <form onSubmit={handelSubmit}>
-          <p>Item quntity: </p>
-          <button>add more items</button>
-        </form>
+        <FormAddToCart />
       </div>
       <br /> <br />
     </section>

@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
 import { notFound } from '../../componenets/notfound';
@@ -5,15 +6,27 @@ import { getToy } from '../../database/toysobjects';
 import ToyCountForm from './ToyCountForm';
 
 export default async function SingleToyPage(props) {
-  console.log(props);
-
   const toy = getToy(Number((await props.params).toyid));
 
-  console.log(toy);
+  const toysQunatityCookie = (await cookies()).get('toysCookies');
+
+  let toysQunatity = toysQunatityCookie
+    ? JSON.parse(toysQunatityCookie.value)
+    : [];
 
   if (!toy) {
     return notFound();
   }
+
+  if (!Array.isArray(toysQunatity)) {
+    toysQunatity = [];
+  }
+
+  const toyQuantityToDisplay = toysQunatity.find((toyQuantity) => {
+    return toyQuantity.id === toy.id;
+  });
+
+  console.log(toyQuantityToDisplay);
 
   return (
     <section>
@@ -33,7 +46,10 @@ export default async function SingleToyPage(props) {
       <p>Item price: {toy.price}€</p>
       <div>{toy.description}</div>
       <div>here should be the form</div>
-      <toyCountForm />
+      <br />
+      <div>{toyQuantityToDisplay?.quantity}</div>
+      <br />
+      <ToyCountForm toyid={toy.id} />
       <br /> <br />
     </section>
   );

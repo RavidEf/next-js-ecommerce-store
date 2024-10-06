@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import CreateOrUpdateCookie from './actions';
 
-export default function ToyCountForm() {
+export default function ToyCountForm(props) {
   const [quantity, setQuantity] = useState(0);
 
   return (
@@ -17,7 +18,9 @@ export default function ToyCountForm() {
             setQuantity(event.currentTarget.value);
           }}
         />
-        <button>Add quant</button>
+        <button formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}>
+          Add quant
+        </button>
       </form>
     </>
   );

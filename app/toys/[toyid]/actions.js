@@ -5,8 +5,6 @@ export default async function CreateOrUpdateCookie(toyid, quantity) {
   // 1. get current cookie
   const toyQuantityCookie = (await cookies()).get('toysCookies');
 
-  console.log(toyQuantityCookie);
-
   // 2. parse the cookie value
 
   const toysQuantity = !toyQuantityCookie

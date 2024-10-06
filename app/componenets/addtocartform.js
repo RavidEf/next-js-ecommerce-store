@@ -1,4 +1,4 @@
-'use client';
+/* 'use client';
 
 import AddToCartButton from './addButton';
 
@@ -27,3 +27,4 @@ export default function FormAddToCart() {
     </div>
   );
 }
+ */

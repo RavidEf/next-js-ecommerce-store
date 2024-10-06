@@ -1,9 +1,9 @@
 import './header.css';
 import Link from 'next/link';
 import React from 'react';
-import AddToCartButton from './addButton';
+import SetCookieForm from './setcookieform';
 
-export default function Header(props) {
+export default function Header(testCookie) {
   return (
     <header>
       <div>
@@ -12,7 +12,7 @@ export default function Header(props) {
           <Link href="/about">About</Link>
           <Link href="/toys">Toys</Link>
           <Link href="/cart">Cart Icon</Link>
-          <p>{props.count}</p>
+          <p>count: {testCookie.value}</p>
         </nav>
       </div>
     </header>

@@ -1,9 +1,8 @@
-'use client';
+/* 'use client';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import Header from './header';
 
-export default function AddToCartButton() {
+export default function AddToCartButton(Header) {
   const [count, setCount] = useState(0);
   const router = useRouter();
 
@@ -20,3 +19,4 @@ export default function AddToCartButton() {
     </div>
   );
 }
+ */

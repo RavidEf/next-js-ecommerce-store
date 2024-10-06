@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import FormAddToCart from '../../componenets/addtocartform';
+import React from 'react';
 import { notFound } from '../../componenets/notfound';
 import { getToy } from '../../database/toysobjects';
+import ToyCountForm from './ToyCountForm';
 
 export default async function SingleToyPage(props) {
   console.log(props);
@@ -31,9 +32,8 @@ export default async function SingleToyPage(props) {
       />
       <p>Item price: {toy.price}€</p>
       <div>{toy.description}</div>
-      <div>
-        <FormAddToCart />
-      </div>
+      <div>here should be the form</div>
+      <toyCountForm />
       <br /> <br />
     </section>
   );

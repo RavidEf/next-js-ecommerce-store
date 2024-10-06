@@ -19,7 +19,6 @@ export default function ToysPage() {
       <h3>Here are the products you can purchase in this store</h3>
       <br />
       <br />
-
       <div>
         <h2>Most wanted cat toys</h2>
         {toys.map((toy) => {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { getToys } from '../database/toysobjects';
+import ToyCountForm from '../toys/[toyid]/ToyCountForm';
 
 export const metadata = {
   title: 'Cart',
@@ -22,6 +23,8 @@ export default async function CartPage() {
     toysQunatity = [];
   }
 
+  console.log(toysQunatity);
+
   const toys = getToys();
 
   return (
@@ -33,20 +36,20 @@ export default async function CartPage() {
           const toysCountQuantity = toysQunatity.find(
             (toyCountQuantity) => toy.id === toyCountQuantity.id,
           );
+
           return (
             <section key={`toys-${toy.id}`}>
               <div className="cart-container">
                 <div>
                   item amount:
-                  {toysCountQuantity?.quantity}
-                  <Image />
+                  {/* <Image /> */}
                 </div>
                 <div>
                   <p>{toy.firstName}</p>
                 </div>
                 <div className="cart-buttons">
                   <button>+</button>
-                  <p>0</p>
+                  <p>{toysCountQuantity?.quantity}</p>
                   <button>-</button>
                 </div>
                 <div className="total-price-cart">Total price:</div>

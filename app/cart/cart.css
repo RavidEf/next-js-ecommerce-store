@@ -10,9 +10,14 @@
   padding: 1rem;
 }
 
-.cart-buttons {
+button {
+  margin: 10px;
+}
+
+/* .cart-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
+  padding: 5px;
+} */

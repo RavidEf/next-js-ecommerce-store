@@ -5,7 +5,7 @@ export default async function CreateOrUpdateCookie(toyid, quantity) {
   // 1. get current cookie
   const toyQuantityCookie = (await cookies()).get('toysCookies');
 
-  // 2. parse the cookie value
+  // 2. parse the cookie value (make it an object)
 
   const toysQuantity = !toyQuantityCookie
     ? []
@@ -19,9 +19,9 @@ export default async function CreateOrUpdateCookie(toyid, quantity) {
   if (!quantityToUpdate) {
     toysQuantity.push({ id: toyid, quantity: quantity });
   } else {
-    quantityToUpdate.quantity = quantity;
+    quantityToUpdate.quantity = quantity + quantity;
   }
-
+  // 4. we overwrite the cookie
   (await cookies()).set('toysCookies', JSON.stringify(toysQuantity));
 }
 // { id: toyid, quantity: quantity }]

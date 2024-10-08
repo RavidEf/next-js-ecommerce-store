@@ -1,11 +1,9 @@
 import './cart.css';
-// import ToysPage from '../toys/page';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { getToys } from '../database/toysobjects';
-import ToyCountForm from '../toys/[toyid]/ToyCountForm';
 
 export const metadata = {
   title: 'Cart',
@@ -23,10 +21,10 @@ export default async function CartPage() {
     toysQunatity = [];
   }
 
-  console.log(toysQunatity);
+  // console.log('cookie details:', toysQunatity);
 
   const toys = getToys();
-
+  console.log(toys[1].price);
   return (
     <section>
       <h1>This is the Cart page </h1>
@@ -49,7 +47,10 @@ export default async function CartPage() {
                 <div className="cart-buttons">
                   <p>{toysCountQuantity?.quantity}</p>
                 </div>
-                <div className="total-price-cart">Total price:</div>
+                <div className="total-price-cart">
+                  Total price:
+                  {toysCountQuantity?.quantity * toy.price}
+                </div>
               </div>
             </section>
           );

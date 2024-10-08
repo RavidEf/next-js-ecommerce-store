@@ -41,16 +41,13 @@ export default async function CartPage() {
             <section key={`toys-${toy.id}`}>
               <div className="cart-container">
                 <div>
-                  item amount:
-                  {/* <Image /> */}
+                  <img src="" alt="image-placeholder" />
                 </div>
                 <div>
                   <p>{toy.firstName}</p>
                 </div>
                 <div className="cart-buttons">
-                  <button>+</button>
                   <p>{toysCountQuantity?.quantity}</p>
-                  <button>-</button>
                 </div>
                 <div className="total-price-cart">Total price:</div>
               </div>

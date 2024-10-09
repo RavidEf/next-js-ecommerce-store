@@ -5,7 +5,6 @@ import Link from 'next/link';
 import React from 'react';
 import DeleteCookieForm from '../componenets/deletecookieform';
 import { getToys } from '../database/toysobjects';
-import { CartSubTotal } from './subtotal';
 
 export const metadata = {
   title: 'Cart',
@@ -66,7 +65,7 @@ export default async function CartPage() {
                     <p> number of items: {toysCountQuantity?.quantity}</p>
                   </div>
                   <div className="total-price-cart">
-                    Total price:
+                    Price:
                     {toysCountQuantity?.quantity * toy.price}
                   </div>
                   <div>
@@ -82,7 +81,7 @@ export default async function CartPage() {
         </div>
       </section>
 
-      <div>subtotal: {totalCartPrice}</div>
+      <div>subtotal: {totalCartPrice}€</div>
     </>
   );
 }

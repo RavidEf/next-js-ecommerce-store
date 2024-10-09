@@ -18,23 +18,20 @@ export default function ToyCountForm(props) {
   }
 
   return (
-    <>
-      <div>how about this?</div>
-      <form>
-        <label htmlFor="quantity">Add quantity of product: </label>
+    <form>
+      <label htmlFor="quantity">Add </label>
 
-        <button id="quantity" value={quantity} onClick={handleIncrement}>
-          +
-        </button>
-        <p>Count:{quantity}</p>
-        <button id="quantity" value={quantity} onClick={handleDecrement}>
-          -
-        </button>
-        <button formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}>
-          Update cart
-        </button>
-      </form>
-    </>
+      <button id="quantity" value={quantity} onClick={handleIncrement}>
+        +
+      </button>
+      <p>items to be added to cart:{quantity}</p>
+      <button id="quantity" value={quantity} onClick={handleDecrement}>
+        -
+      </button>
+      <button formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}>
+        Update cart
+      </button>
+    </form>
   );
 }
 

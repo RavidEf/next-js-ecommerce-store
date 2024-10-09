@@ -44,10 +44,9 @@ export default async function SingleToyPage(props) {
         height={200}
       />
       <p>Item price: {toy.price}€</p>
-      <div>{toy.description}</div>
-      <div>here should be the form</div>
+      <div>item description: {toy.description}</div>
       <br />
-      <div>{toyQuantityToDisplay?.quantity}</div>
+      <div>{/* toyQuantityToDisplay?.quantity */}</div>
       <br />
       <ToyCountForm toyid={toy.id} />
       <br /> <br />

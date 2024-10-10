@@ -28,7 +28,7 @@ export default function ToysPage() {
                 <Link href={`/toys/${toy.id}`}>
                   <div>{toy.firstName}</div>
                   <Image
-                    src={`/images/${toy.imageName.toLowerCase()}.jpg`}
+                    src={`/images/${toy.imageName.toLowerCase()}.png`}
                     alt={toy.firstName}
                     width={75}
                     height={75}

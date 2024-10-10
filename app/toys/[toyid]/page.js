@@ -38,7 +38,7 @@ export default async function SingleToyPage(props) {
       <br /> <br />
       <div>{toy.firstName}</div>
       <Image
-        src={`/images/${toy.imageName.toLowerCase()}.jpg`}
+        src={`/images/${toy.imageName.toLowerCase()}.png`}
         alt={toy.firstName}
         width={200}
         height={200}

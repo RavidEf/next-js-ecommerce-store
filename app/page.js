@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import './page.css';
 
 // {`/public/${toy.firstName.toLowerCase()}.jpg`}
 export default function Home() {

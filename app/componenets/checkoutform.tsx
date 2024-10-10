@@ -14,7 +14,7 @@ export default function CheckoutForm() {
   return (
     <section>
       <div>
-        <form action="/thankyou" onSubmit={handelSubmit}>
+        <form onSubmit={handelSubmit}>
           <label htmlFor="fName">First Name</label>
           <input id="fName" data-test-id="checkout-first-name" />
 

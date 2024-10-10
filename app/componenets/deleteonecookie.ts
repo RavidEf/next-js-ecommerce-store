@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 
 export default async function DeleteOneCookie(toyid: number) {
   // 1. get current cookie
-  const toyQuantityCookie = (await cookies()).get('toysCookies');
+  const toyQuantityCookie = (await cookies()).get('cart');
 
   // 2. parse the cookie value (make it an object)
 
@@ -16,5 +16,5 @@ export default async function DeleteOneCookie(toyid: number) {
     (toy: { id: number }) => toy.id !== toyid,
   );
   // save the updated cookie with the set cookie func
-  (await cookies()).set('toysCookies', JSON.stringify(updatedToysQuantity));
+  (await cookies()).set('cart', JSON.stringify(updatedToysQuantity));
 }

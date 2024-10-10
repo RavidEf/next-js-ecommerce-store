@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default async function CheckoutPage() {
-  const toysQunatityCookie = (await cookies()).get('toysCookies');
+  const toysQunatityCookie = (await cookies()).get('cart');
 
   let toysQunatity =
     toysQunatityCookie && toysQunatityCookie.value

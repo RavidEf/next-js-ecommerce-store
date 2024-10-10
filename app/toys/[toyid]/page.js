@@ -8,7 +8,7 @@ import ToyCountForm from './ToyCountForm';
 export default async function SingleToyPage(props) {
   const toy = getToy(Number((await props.params).toyid));
 
-  const toysQunatityCookie = (await cookies()).get('toysCookies');
+  const toysQunatityCookie = (await cookies()).get('cart');
 
   let toysQunatity = toysQunatityCookie
     ? JSON.parse(toysQunatityCookie.value)

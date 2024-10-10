@@ -1,11 +1,12 @@
 import './header.css';
 import { cookies } from 'next/headers';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { getToys } from '../database/toysobjects';
 
 export default async function Header() {
-  const toysQunatityCookie = (await cookies()).get('toysCookies');
+  const toysQunatityCookie = (await cookies()).get('cart');
 
   let toysQunatity =
     toysQunatityCookie && toysQunatityCookie.value
@@ -37,11 +38,27 @@ export default async function Header() {
     <header>
       <div>
         <nav>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <Image
+              src="/images/cattos.png"
+              height={43}
+              width={196}
+              alt="logo"
+            />
+          </Link>
           <Link href="/about">About</Link>
           <Link href="/toys">Toys</Link>
-          <Link href="/cart">Cart Icon</Link>
-          <p>count: {itemsInCart}</p>
+          <div className="cart-icon-container">
+            <Link href="/cart">
+              <Image
+                src="/images/shopping-cart-icon.png"
+                height={48}
+                width={48}
+                alt="logo"
+              />
+            </Link>
+            <span>{itemsInCart}</span>
+          </div>
         </nav>
       </div>
     </header>

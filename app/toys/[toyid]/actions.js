@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 
 export default async function CreateOrUpdateCookie(toyid, quantity) {
   // 1. get current cookie
-  const toyQuantityCookie = (await cookies()).get('toysCookies');
+  const toyQuantityCookie = (await cookies()).get('cart');
 
   // 2. parse the cookie value (make it an object)
 
@@ -22,6 +22,6 @@ export default async function CreateOrUpdateCookie(toyid, quantity) {
     quantityToUpdate.quantity = quantity + quantity;
   }
   // 4. we overwrite the cookie
-  (await cookies()).set('toysCookies', JSON.stringify(toysQuantity));
+  (await cookies()).set('cart', JSON.stringify(toysQuantity));
 }
 // { id: toyid, quantity: quantity }]

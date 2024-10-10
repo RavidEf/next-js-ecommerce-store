@@ -1,9 +1,24 @@
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(170, 166, 166);
   height: 75px;
-  gap: 2rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  margin: auto;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+span {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  border-radius: 10px;
 }

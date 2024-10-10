@@ -34,7 +34,7 @@ export default function ToysPage() {
                     height={75}
                   />
                 </Link>
-                <div>{toy.description}</div>
+                <div />
               </div>
             </div>
           );

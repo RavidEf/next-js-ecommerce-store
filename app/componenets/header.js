@@ -46,8 +46,12 @@ export default async function Header() {
               alt="logo"
             />
           </Link>
-          <Link href="/about">About</Link>
-          <Link href="/toys">Toys</Link>
+          <Link className="about-link" href="/about">
+            About
+          </Link>
+          <Link className="toys-link" href="/toys">
+            Toys
+          </Link>
           <div className="cart-icon-container">
             <Link href="/cart">
               <Image

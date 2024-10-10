@@ -7,9 +7,10 @@ import { getToys } from '../database/toysobjects';
 export default async function Header() {
   const toysQunatityCookie = (await cookies()).get('toysCookies');
 
-  let toysQunatity = toysQunatityCookie
-    ? JSON.parse(toysQunatityCookie.value)
-    : [];
+  let toysQunatity =
+    toysQunatityCookie && toysQunatityCookie.value
+      ? JSON.parse(toysQunatityCookie.value || '[]')
+      : [];
 
   if (!Array.isArray(toysQunatity)) {
     toysQunatity = [];

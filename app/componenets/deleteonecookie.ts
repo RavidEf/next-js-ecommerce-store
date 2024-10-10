@@ -1,7 +1,7 @@
 'use server';
 import { cookies } from 'next/headers';
 
-export default async function DeleteOneCookie(toyid) {
+export default async function DeleteOneCookie(toyid: number) {
   // 1. get current cookie
   const toyQuantityCookie = (await cookies()).get('toysCookies');
 
@@ -12,7 +12,9 @@ export default async function DeleteOneCookie(toyid) {
     : JSON.parse(toyQuantityCookie.value);
 
   // Filter out the toy with the matching id
-  const updatedToysQuantity = toysQuantity.filter((toy) => toy.id !== toyid);
+  const updatedToysQuantity = toysQuantity.filter(
+    (toy: { id: number }) => toy.id !== toyid,
+  );
   // save the updated cookie with the set cookie func
   (await cookies()).set('toysCookies', JSON.stringify(updatedToysQuantity));
 }

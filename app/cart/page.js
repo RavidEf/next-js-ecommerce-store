@@ -22,9 +22,6 @@ export default async function CartPage() {
     toysQunatity = [];
   }
 
-  // ---->>>>>> const subTotalCart = <--------
-  // console.log('cookie details:', toysQunatity);
-
   const toys = getToys();
 
   // filter the products to only show when quantity is more than 0
@@ -42,6 +39,8 @@ export default async function CartPage() {
     return acc + toy.price * toyQuantity;
   }, 0);
 
+  console.log('this is my subtotal from cart:', totalCartPrice);
+
   return (
     <>
       <section>
@@ -56,7 +55,10 @@ export default async function CartPage() {
               <section key={`toys-${toy.id}`}>
                 <div className="cart-container">
                   <div>
-                    <img src="" alt="image-placeholder" />
+                    <img
+                      src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Froyalty-free&psig=AOvVaw2zGyP2enmrVzlO_8Y8-NcC&ust=1728574592005000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiPwqfQgYkDFQAAAAAdAAAAABAE"
+                      alt="image-placeholder"
+                    />
                   </div>
                   <div>
                     <p>{toy.firstName}</p>
@@ -81,7 +83,7 @@ export default async function CartPage() {
         </div>
       </section>
 
-      <div>subtotal: {totalCartPrice}€</div>
+      <div>total: {totalCartPrice}</div>
     </>
   );
 }

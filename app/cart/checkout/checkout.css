@@ -1,0 +1,11 @@
+.checkout-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  border-radius: 5px;
+  background-color: rgb(247, 240, 231);
+}

@@ -1,5 +1,6 @@
 import './cart.css';
 import { cookies } from 'next/headers';
+import Image from 'next/image';
 // import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -22,7 +23,7 @@ export default async function CartPage() {
     toysQunatity = [];
   }
 
-  const toys = getToysInsecure();
+  const toys = await getToysInsecure();
 
   // filter the products to only show when quantity is more than 0
   const filteredToys = toys.filter((toy) => {
@@ -55,9 +56,11 @@ export default async function CartPage() {
               <section key={`toys-${toy.id}`}>
                 <div className="cart-container">
                   <div>
-                    <img
-                      src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Froyalty-free&psig=AOvVaw2zGyP2enmrVzlO_8Y8-NcC&ust=1728574592005000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiPwqfQgYkDFQAAAAAdAAAAABAE"
-                      alt="image-placeholder"
+                    <Image
+                      src={`/images/${toy.imageName.toLowerCase()}.png`}
+                      alt={toy.firstName}
+                      width={75}
+                      height={75}
                     />
                   </div>
                   <div>

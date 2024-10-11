@@ -61,7 +61,7 @@ export default async function Header() {
                 alt="logo"
               />
             </Link>
-            <span>{itemsInCart}</span>
+            <span className='cart-counter'>{itemsInCart}</span>
           </div>
         </nav>
       </div>

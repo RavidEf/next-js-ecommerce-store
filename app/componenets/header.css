@@ -15,7 +15,7 @@ nav {
   padding-left: 3rem;
 }
 
-span {
+.cart-counter {
   font-size: 14px;
   background: #344e41;
   color: #fff;

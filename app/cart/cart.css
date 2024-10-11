@@ -4,10 +4,14 @@
   align-items: center;
   margin: 1rem;
   padding: 1rem;
+  border: 5px solid #344e41;
+  background-color: #dad7cd;
+  border-radius: 20px;
 }
 
 .cart-container > div {
   padding: 1rem;
+  justify-content: space-evenly;
 }
 
 button {

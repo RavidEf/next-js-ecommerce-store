@@ -4,8 +4,6 @@ import postgres, { Sql } from 'postgres';
 
 config();
 
-console.log('this is the config console log', config());
-
 declare namespace globalThis {
   let postgresSqlClient: Sql;
 }

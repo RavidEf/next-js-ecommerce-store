@@ -20,7 +20,7 @@ export default async function CheckoutPage() {
     toysQunatity = [];
   }
 
-  const toys = getToysInsecure();
+  const toys = await getToysInsecure();
 
   // filter the products to only show when quantity is more than 0
   const filteredToys = toys.filter((toy) => {
@@ -38,7 +38,7 @@ export default async function CheckoutPage() {
   }, 0);
 
   return (
-    <div>
+    <div className="checkout-page">
       <h1>This is my Checkout page</h1>
       <CheckoutForm />
       <p>total to be paid: {totalCartPrice}</p>

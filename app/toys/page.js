@@ -15,31 +15,32 @@ export default async function ToysPage() {
 
   return (
     <div>
-      <h1>The full Catto selection</h1>
-      <h3>Here are the products you can purchase in this store</h3>
-      <br />
-      <br />
-      <div>
-        <h2>Most wanted cat toys</h2>
+      <h1>The full Cattos selection</h1>
+      <hr />
+      <div className="toys-container">
         {toys.map((toy) => {
           return (
-            <div className="toys-container" key={`toys-${toy.id}`}>
-              <div className="toys-block">
+            <div className="toys-block" key={`toys-${toy.id}`}>
+              <div>
                 <Link href={`/toys/${toy.id}`}>
-                  <div>{toy.firstName}</div>
                   <Image
                     src={`/images/${toy.imageName.toLowerCase()}.png`}
                     alt={toy.firstName}
-                    width={75}
-                    height={75}
+                    width={500}
+                    height={500}
                   />
                 </Link>
+                <div className="toys-spanss">
+                  <span className="toy-name">{toy.firstName}</span>
+                  <span className="toy-name">{toy.price} €</span>
+                </div>
                 <div />
               </div>
             </div>
           );
         })}
       </div>
+      <hr />
     </div>
   );
 }

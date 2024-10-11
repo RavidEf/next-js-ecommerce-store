@@ -1,4 +1,5 @@
 'use client';
+import '/app/cart/checkout/checkout.css';
 import React from 'react';
 import DeleteAllCookies from './deleteallcookies';
 
@@ -14,7 +15,7 @@ export default function CheckoutForm() {
   return (
     <section>
       <div>
-        <form onSubmit={handelSubmit}>
+        <form className="checkout-form" onSubmit={handelSubmit}>
           <label htmlFor="fName">First Name</label>
           <input id="fName" data-test-id="checkout-first-name" />
 
@@ -36,6 +37,8 @@ export default function CheckoutForm() {
           <label htmlFor="country">Country</label>
           <input id="country" data-test-id="checkout-country" />
           <hr />
+          <hr />
+
           <label htmlFor="credit">Credit Card</label>
           <input id="credit" data-test-id="checkout-credit-card" />
 

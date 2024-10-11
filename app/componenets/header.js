@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { getToys } from '../database/toysobjects';
+import { getToysInsecure } from '../database/toysobjects.ts';
 
 export default async function Header() {
   const toysQunatityCookie = (await cookies()).get('cart');
@@ -17,7 +17,7 @@ export default async function Header() {
     toysQunatity = [];
   }
 
-  const toys = getToys();
+  const toys = getToysInsecure();
 
   // filter the products to only show when quantity is more than 0
   const filteredToys = toys.filter((toy) => {

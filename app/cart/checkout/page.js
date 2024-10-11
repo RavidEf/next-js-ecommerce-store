@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import React from 'react';
 import CheckoutForm from '../../componenets/checkoutform';
-import { getToys } from '../../database/toysobjects';
+import { getToysInsecure } from '../../database/toysobjects.ts';
 
 export const metadata = {
   title: 'Checkout',
@@ -20,7 +20,7 @@ export default async function CheckoutPage() {
     toysQunatity = [];
   }
 
-  const toys = getToys();
+  const toys = getToysInsecure();
 
   // filter the products to only show when quantity is more than 0
   const filteredToys = toys.filter((toy) => {

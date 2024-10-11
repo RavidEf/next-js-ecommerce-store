@@ -1,6 +1,8 @@
-// import 'server-only';
+import 'server-only';
+import React, { cache } from 'react';
+import { sql } from './connect';
 
-export const dummyObj = [
+/* export const dummyObj = [
   {
     id: 1,
     firstName: 'Fluffy Bird',
@@ -100,12 +102,18 @@ export const dummyObj = [
       'You will be surprised but this is a best seller wodden ball cats love pushing around',
     price: 7,
   },
-];
+]; */
 
-export function getToys() {
-  return dummyObj;
-}
+export const getToysInsecure = cache(async () => {
+  const toys = await sql`
+    SELECT
+      *
+    FROM
+      toys;
+  `;
+  return toys;
+});
 
-export function getToy(id) {
-  return dummyObj.find((toy) => toy.id === id);
+export function getToy(id: number) {
+  return getToysInsecure.find((toy) => toy.id === id);
 }

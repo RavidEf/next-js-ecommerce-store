@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 import React from 'react';
 import DeleteCookieForm from '../componenets/deletecookieform';
-import { getToys } from '../database/toysobjects';
+import { getToysInsecure } from '../database/toysobjects.ts';
 
 export const metadata = {
   title: 'Cart',
@@ -22,7 +22,7 @@ export default async function CartPage() {
     toysQunatity = [];
   }
 
-  const toys = getToys();
+  const toys = getToysInsecure();
 
   // filter the products to only show when quantity is more than 0
   const filteredToys = toys.filter((toy) => {

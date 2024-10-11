@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
 import { notFound } from '../../componenets/notfound';
-import { getToy } from '../../database/toysobjects';
+import { getToy } from '../../database/toysobjects.ts';
 import ToyCountForm from './ToyCountForm';
 
 export default async function SingleToyPage(props) {

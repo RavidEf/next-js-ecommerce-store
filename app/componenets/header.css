@@ -27,7 +27,7 @@ span {
 .about-link,
 .toys-link {
   transition: ease-out;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
 }
 
 .about-link:hover,
@@ -36,5 +36,5 @@ span {
   border-radius: 30px;
   padding: 15px;
   transition: ease-in;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 }

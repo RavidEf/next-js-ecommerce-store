@@ -3,8 +3,8 @@ import { cookies } from 'next/headers';
 // import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { getToysInsecure } from '../../database/toysobjects';
 import DeleteCookieForm from '../componenets/deletecookieform';
-import { getToysInsecure } from '../database/toysobjects.ts';
 
 export const metadata = {
   title: 'Cart',

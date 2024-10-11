@@ -2,7 +2,7 @@ import './toys.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { getToysInsecure } from '../database/toysobjects.ts';
+import { getToysInsecure } from '../../database/toysobjects';
 
 export const metadata = {
   title: 'Toys',
@@ -10,8 +10,8 @@ export const metadata = {
 };
 
 // {`/public/${toy.firstName.toLowerCase()}.jpg`}
-export default function ToysPage() {
-  const toys = getToysInsecure();
+export default async function ToysPage() {
+  const toys = await getToysInsecure();
 
   return (
     <div>

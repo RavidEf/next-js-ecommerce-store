@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import React from 'react';
+import { getToysInsecure } from '../../../database/toysobjects';
 import CheckoutForm from '../../componenets/checkoutform';
-import { getToysInsecure } from '../../database/toysobjects.ts';
 
 export const metadata = {
   title: 'Checkout',

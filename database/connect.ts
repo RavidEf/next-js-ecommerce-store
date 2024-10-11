@@ -4,12 +4,7 @@ import postgres, { Sql } from 'postgres';
 
 config();
 
-/* export const sql = postgres({
-  transform: {
-    ...postgres.camel,
-    undefined: null,
-  },
-}); */
+console.log('this is the config console log', config());
 
 declare namespace globalThis {
   let postgresSqlClient: Sql;

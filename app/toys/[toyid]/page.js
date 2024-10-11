@@ -1,12 +1,12 @@
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
+import { getToyInsecure } from '../../../database/toysobjects';
 import { notFound } from '../../componenets/notfound';
-import { getToy } from '../../database/toysobjects.ts';
 import ToyCountForm from './ToyCountForm';
 
 export default async function SingleToyPage(props) {
-  const toy = getToy(Number((await props.params).toyid));
+  const toy = await getToyInsecure(Number((await props.params).toyid));
 
   const toysQunatityCookie = (await cookies()).get('cart');
 

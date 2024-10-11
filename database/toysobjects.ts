@@ -1,6 +1,41 @@
-import 'server-only';
-import React, { cache } from 'react';
+import { cache } from 'react';
 import { sql } from './connect';
+
+type Toy = {
+  id: number;
+  firstName: string;
+  imageName: string;
+  description: string;
+  price: number | null;
+};
+
+export const getToysInsecure = cache(async () => {
+  const toys = await sql<Toy[]>`
+    SELECT
+      *
+    FROM
+      toys
+  `;
+  return toys;
+});
+
+export const getToyInsecure = cache(async (id: number) => {
+  const [toy] = await sql<Toy[]>`
+    SELECT
+      *
+    FROM
+      toys
+    WHERE
+      id = ${id}
+  `;
+  console.log('toys console :', toy);
+  return toy;
+});
+
+// old code of getting one toy
+/* export function getToy(id: number) {
+  return getToyInsecure.find((toy) => toy.id === id);
+} */
 
 /* export const dummyObj = [
   {
@@ -103,17 +138,3 @@ import { sql } from './connect';
     price: 7,
   },
 ]; */
-
-export const getToysInsecure = cache(async () => {
-  const toys = await sql`
-    SELECT
-      *
-    FROM
-      toys;
-  `;
-  return toys;
-});
-
-export function getToy(id: number) {
-  return getToysInsecure.find((toy) => toy.id === id);
-}

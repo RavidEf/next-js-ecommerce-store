@@ -41,7 +41,7 @@ export default async function CheckoutPage() {
     <div className="checkout-page">
       <h1>This is my Checkout page</h1>
       <CheckoutForm />
-      <p>total to be paid: {totalCartPrice}</p>
+      <p>total to be paid: {totalCartPrice} €</p>
     </div>
   );
 }

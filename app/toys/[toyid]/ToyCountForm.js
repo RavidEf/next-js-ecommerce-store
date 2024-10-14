@@ -5,7 +5,7 @@ import { useState } from 'react';
 import CreateOrUpdateCookie from './actions';
 
 export default function ToyCountForm(props) {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   // const itemTotalPrice = quantity * dummyObj.price;
   function handleIncrement(event) {
     setQuantity(Number(quantity + 1));
@@ -13,7 +13,7 @@ export default function ToyCountForm(props) {
   }
 
   function handleDecrement(event) {
-    setQuantity(Number(quantity > 0 ? quantity - 1 : []));
+    setQuantity(Number(quantity > 1 ? quantity - 1 : []));
     event.preventDefault();
   }
 
@@ -22,7 +22,7 @@ export default function ToyCountForm(props) {
       <p>items to be added to cart:{quantity}</p>
       <button id="quantity-minus" value={quantity} onClick={handleDecrement}>
         -
-      </button>{' '}
+      </button>
       <button id="quantity-plus" value={quantity} onClick={handleIncrement}>
         +
       </button>

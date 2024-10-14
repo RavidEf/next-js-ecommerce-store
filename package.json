@@ -21,6 +21,7 @@
     "tsx": "^4.19.1"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@ts-safeql/eslint-plugin": "^3.4.7",

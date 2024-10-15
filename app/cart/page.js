@@ -1,10 +1,11 @@
 import './cart.css';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
-// import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { getToysInsecure } from '../../database/toysobjects';
+import { calculateTotalCartPrice } from '../../util/combine-product';
+import { handelClickToCheckout } from '../componenets/click-to-checkout';
 import DeleteCookieForm from '../componenets/deletecookieform';
 
 export const metadata = {
@@ -32,15 +33,9 @@ export default async function CartPage() {
     );
     return toysCountQuantity?.quantity > 0;
   });
-
-  const totalCartPrice = filteredToys.reduce((acc, toy) => {
-    // Find the quantity of the current toy based on its id
-    const toyQuantity =
-      toysQunatity.find((item) => item.id === toy.id)?.quantity || 0;
-    return acc + toy.price * toyQuantity;
-  }, 0);
-
-  console.log('this is my subtotal from cart:', totalCartPrice);
+  console.log('filtered toys:', filteredToys);
+  // call the function we declare in the util folder and pass the variables it needs
+  const totalCartPrice = calculateTotalCartPrice(filteredToys, toysQunatity);
 
   return (
     <>
@@ -59,8 +54,8 @@ export default async function CartPage() {
                     <Image
                       src={`/images/${toy.imageName.toLowerCase()}.png`}
                       alt={toy.firstName}
-                      width={75}
-                      height={75}
+                      width={125}
+                      height={125}
                     />
                   </div>
                   <div>
@@ -80,13 +75,11 @@ export default async function CartPage() {
               </section>
             );
           })}
-          <Link href="/cart/checkout">
-            Go to Checkout <b>CTA button</b>
-          </Link>
+          <button onClick={handelClickToCheckout}>Go to Checkout</button>
         </div>
       </section>
 
-      <div>total: {totalCartPrice}</div>
+      <div>Cart total: {totalCartPrice}€</div>
     </>
   );
 }

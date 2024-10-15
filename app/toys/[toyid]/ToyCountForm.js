@@ -1,5 +1,6 @@
 'use client';
 
+import './ToyCountForm.css';
 import { useState } from 'react';
 // import { dummyObj } from '../../database/toysobjects';
 import CreateOrUpdateCookie from './actions';
@@ -18,17 +19,33 @@ export default function ToyCountForm(props) {
   }
 
   return (
-    <form>
-      <p>items to be added to cart:{quantity}</p>
-      <button id="quantity-minus" value={quantity} onClick={handleDecrement}>
-        -
-      </button>
-      <button id="quantity-plus" value={quantity} onClick={handleIncrement}>
-        +
-      </button>
-      <button formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}>
-        Update cart
-      </button>
+    <form className="toy-form">
+      <p>choose amount to add to cart:</p>
+      <div className="box-3-buttons-toy">
+        <div className="button-toy-form">
+          <button
+            className="minus-button"
+            value={quantity}
+            onClick={handleDecrement}
+          >
+            -
+          </button>
+          <span className="item-quntity">{quantity}</span>
+          <button
+            className="plus-button"
+            value={quantity}
+            onClick={handleIncrement}
+          >
+            +
+          </button>
+        </div>
+        <button
+          className="add-to-cart"
+          formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}
+        >
+          Add to cart
+        </button>
+      </div>
     </form>
   );
 }

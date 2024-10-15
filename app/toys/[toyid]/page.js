@@ -1,3 +1,4 @@
+import './toyid.css';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import React from 'react';
@@ -29,26 +30,26 @@ export default async function SingleToyPage(props) {
   console.log(toyQuantityToDisplay);
 
   return (
-    <section>
-      <div>
-        <h1>
-          This page is for the item: <b>{toy.firstName}</b>
+    <section className="toy-page">
+      <div className="information-div-toy">
+        <h1 className="h1-toy">
+          The <b>{toy.firstName}</b>
         </h1>
+
+        <div className="item-descruption">
+          item description: {toy.description}
+        </div>
+        <p className="item-price">Item price: {toy.price}€</p>
+        <ToyCountForm className="toy-form" toyid={toy.id} />
       </div>
-      <br /> <br />
-      <div>{toy.firstName}</div>
-      <Image
-        src={`/images/${toy.imageName.toLowerCase()}.png`}
-        alt={toy.firstName}
-        width={500}
-        height={400}
-      />
-      <p>Item price: {toy.price}€</p>
-      <div>item description: {toy.description}</div>
-      <br />
-      <div>{/* toyQuantityToDisplay?.quantity */}</div>
-      <br />
-      <ToyCountForm toyid={toy.id} />
+      <div className="image-div-toy">
+        <Image
+          src={`/images/${toy.imageName.toLowerCase()}.png`}
+          alt={toy.firstName}
+          width={500}
+          height={500}
+        />
+      </div>
       <br /> <br />
     </section>
   );

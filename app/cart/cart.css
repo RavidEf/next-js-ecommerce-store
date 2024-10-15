@@ -9,9 +9,19 @@
   border-radius: 20px;
 }
 
+.cart-container > img {
+  width: 100%;
+  height: auto;
+}
+
 .cart-container > div {
   padding: 1rem;
   justify-content: space-evenly;
+  font-size: 1.4rem;
+}
+
+.cart-container > p {
+  font-size: 1.4rem;
 }
 
 button {

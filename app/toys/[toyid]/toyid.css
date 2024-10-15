@@ -1,0 +1,29 @@
+.toy-page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.h1-toy {
+  font-size: 3rem;
+}
+/* .information-div-toy {
+  border: solid 2px green;
+} */
+
+@media screen and (max-width: 768px) {
+  .toy-page {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toy-page {
+    flex-direction: column;
+  }
+}

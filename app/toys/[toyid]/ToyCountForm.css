@@ -1,0 +1,62 @@
+.box-3-buttons-toy {
+  width: 60%;
+}
+
+.button-toy-form {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.add-to-cart {
+  display: block;
+  width: 100%;
+  background-color: #2d4438;
+  color: white;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #1c2b23;
+}
+
+.item-price {
+  font-size: 1.2rem;
+}
+
+.item-quntity {
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 800;
+}
+
+.minus-button {
+  width: 35%;
+  background-color: #a3b18a;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.plus-button {
+  width: 35%;
+  background-color: #a3b18a;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.plus-button:hover,
+.minus-button:hover {
+  background-color: rgb(118, 146, 71);
+}
+
+.item-descruption {
+  display: block;
+  width: 70%;
+}

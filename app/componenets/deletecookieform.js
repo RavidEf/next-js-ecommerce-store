@@ -1,7 +1,15 @@
 'use client';
+import './remove-item.css';
 import React from 'react';
 import DeleteOneCookie from './deleteonecookie.ts';
 
 export default function DeleteCookieForm({ toyid }) {
-  return <button onClick={() => DeleteOneCookie(toyid)}>Delete item</button>;
+  return (
+    <div>
+      {' '}
+      <button className="remove-button" onClick={() => DeleteOneCookie(toyid)}>
+        Remove
+      </button>
+    </div>
+  );
 }

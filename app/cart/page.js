@@ -48,7 +48,10 @@ export default async function CartPage() {
               (toyCountQuantity) => toy.id === toyCountQuantity.id,
             );
             return (
-              <section key={`toys-${toy.id}`}>
+              <section
+                key={`toys-${toy.id}`}
+                data-test-id="cart-product-<product id>"
+              >
                 <div className="cart-container">
                   <div>
                     <Image
@@ -62,11 +65,15 @@ export default async function CartPage() {
                     <p>{toy.firstName}</p>
                   </div>
                   <div className="cart-buttons">
-                    <p> number of items: {toysCountQuantity?.quantity}</p>
+                    <p data-test-id="cart-product-quantity-<product id>">
+                      {' '}
+                      number of items: {toysCountQuantity?.quantity}
+                    </p>
                   </div>
                   <div className="total-price-cart">
                     Price:
                     {toysCountQuantity?.quantity * toy.price}
+                    <span>€</span>
                   </div>
                   <div>
                     <DeleteCookieForm toyid={toy.id} />
@@ -75,11 +82,16 @@ export default async function CartPage() {
               </section>
             );
           })}
-          <button onClick={handelClickToCheckout}>Go to Checkout</button>
+          <button data-test-id="cart-checkout" onClick={handelClickToCheckout}>
+            Go to Checkout
+          </button>
         </div>
       </section>
 
-      <div>Cart total: {totalCartPrice}€</div>
+      <div>
+        <span data-test-id="cart-total">Cart total: {totalCartPrice}</span>
+        <span>€</span>
+      </div>
     </>
   );
 }

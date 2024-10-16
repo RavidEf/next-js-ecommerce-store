@@ -49,11 +49,11 @@ export default async function Header() {
           <Link className="about-link" href="/about">
             About
           </Link>
-          <Link className="toys-link" href="/toys">
+          <Link className="toys-link" href="/toys" data-test-id="products-link">
             Toys
           </Link>
           <div className="cart-icon-container">
-            <Link href="/cart">
+            <Link href="/cart" data-test-id="cart-link">
               <Image
                 src="/images/shopping-cart-icon.png"
                 height={48}
@@ -61,7 +61,9 @@ export default async function Header() {
                 alt="logo"
               />
             </Link>
-            <span className='cart-counter'>{itemsInCart}</span>
+            <span className="cart-counter" data-test-id="cart-count">
+              {itemsInCart}
+            </span>
           </div>
         </nav>
       </div>

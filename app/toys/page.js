@@ -22,18 +22,22 @@ export default async function ToysPage() {
           return (
             <div className="toys-block" key={`toys-${toy.id}`}>
               <div>
-                <Link href={`/toys/${toy.id}`}>
+                <Link
+                  href={`/toys/${toy.id}`}
+                  data-test-id="product-<product id>"
+                >
                   <Image
                     src={`/images/${toy.imageName.toLowerCase()}.png`}
                     alt={toy.firstName}
                     width={500}
                     height={500}
                   />
+
+                  <div className="toys-spanss">
+                    <span className="toy-name">{toy.firstName}</span>
+                    <span className="toy-name">{toy.price} €</span>
+                  </div>
                 </Link>
-                <div className="toys-spanss">
-                  <span className="toy-name">{toy.firstName}</span>
-                  <span className="toy-name">{toy.price} €</span>
-                </div>
                 <div />
               </div>
             </div>

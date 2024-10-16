@@ -1,5 +1,5 @@
 'use client';
-import 'C:/Users/efron/projects/next-js-ecommerce-store/app/cart/checkout/checkout.css';
+import 'C:/Users/efron/projects/next-js-ecommerce-store/app/cart/checkout/checkoutform.css';
 import React from 'react';
 import DeleteAllCookies from './deleteallcookies';
 
@@ -73,7 +73,6 @@ export default function CheckoutForm() {
             required
             placeholder="Austria"
           />
-          <hr />
           <hr />
 
           <label htmlFor="credit">Credit Card</label>

@@ -7,7 +7,11 @@ export default function DeleteCookieForm({ toyid }) {
   return (
     <div>
       {' '}
-      <button className="remove-button" onClick={() => DeleteOneCookie(toyid)}>
+      <button
+        className="remove-button"
+        onClick={() => DeleteOneCookie(toyid)}
+        data-test-id="cart-product-remove-<product id>"
+      >
         Remove
       </button>
     </div>

@@ -39,7 +39,10 @@ export default async function SingleToyPage(props) {
         <div className="item-descruption">
           item description: {toy.description}
         </div>
-        <p className="item-price">Item price: {toy.price}€</p>
+        <p className="item-price" data-test-id="product-price">
+          Item price: {toy.price}
+          <span>€</span>
+        </p>
         <ToyCountForm className="toy-form" toyid={toy.id} />
       </div>
       <div className="image-div-toy">
@@ -48,6 +51,7 @@ export default async function SingleToyPage(props) {
           alt={toy.firstName}
           width={500}
           height={500}
+          data-test-id="product-image"
         />
       </div>
       <br /> <br />

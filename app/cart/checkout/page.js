@@ -1,3 +1,4 @@
+import './checkoutpage.css';
 import { cookies } from 'next/headers';
 import React from 'react';
 import { getToysInsecure } from '../../../database/toysobjects';
@@ -41,7 +42,7 @@ export default async function CheckoutPage() {
     <div className="checkout-page">
       <h1>Check-this-out</h1>
       <CheckoutForm />
-      <p>total to be paid: {totalCartPrice} €</p>
+      <h3 className="checkout-total">total to be paid: {totalCartPrice} €</h3>
     </div>
   );
 }

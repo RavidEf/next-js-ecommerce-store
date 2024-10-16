@@ -30,7 +30,9 @@ export default function ToyCountForm(props) {
           >
             -
           </button>
-          <span className="item-quntity">{quantity}</span>
+          <span className="item-quntity" data-test-id="product-quantity">
+            {quantity}
+          </span>
           <button
             className="plus-button"
             value={quantity}
@@ -42,6 +44,7 @@ export default function ToyCountForm(props) {
         <button
           className="add-to-cart"
           formAction={() => CreateOrUpdateCookie(props.toyid, quantity)}
+          data-test-id="product-add-to-cart"
         >
           Add to cart
         </button>

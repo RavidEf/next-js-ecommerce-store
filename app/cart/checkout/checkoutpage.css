@@ -1,0 +1,8 @@
+.checkout-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}

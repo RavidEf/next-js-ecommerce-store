@@ -54,7 +54,7 @@ export default async function SingleToyPage(props: Props) {
           Item price: {toy.price}
           <span>€</span>
         </p>
-        <ToyCountForm className="toy-form" toyid={toy.id} />
+        <ToyCountForm toyid={toy.id} />
       </div>
       <div className="image-div-toy">
         <Image

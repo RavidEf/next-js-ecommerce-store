@@ -5,19 +5,19 @@ import { useState } from 'react';
 // import { dummyObj } from '../../database/toysobjects';
 import CreateOrUpdateCookie from './actions';
 
-type Props = {
+/* type Props = {
   toyid: number;
-};
+}; */
 
-export default function ToyCountForm(props: Props) {
+export default function ToyCountForm(props) {
   const [quantity, setQuantity] = useState(1);
   // const itemTotalPrice = quantity * dummyObj.price;
-  function handleIncrement(event: React.MouseEvent<HTMLButtonElement>) {
+  function handleIncrement(event) {
     setQuantity(Number(quantity + 1));
     event.preventDefault();
   }
 
-  function handleDecrement(event: React.MouseEvent<HTMLButtonElement>) {
+  function handleDecrement(event) {
     setQuantity(Number(quantity > 1 ? quantity - 1 : []));
     event.preventDefault();
   }

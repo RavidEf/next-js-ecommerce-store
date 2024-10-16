@@ -1,11 +1,52 @@
-.checkout-form {
-  max-width: 500px;
+.checkout-div {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-input {
+.checkout-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #344e41;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px;
+}
+
+input,
+.expireMM,
+.expireYY {
   border-radius: 5px;
   background-color: rgb(247, 240, 231);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.checkout-form > input {
+  height: 1.2rem;
+}
+
+.checkbox-checkout {
+  background-color: rgb(247, 240, 231);
+  display: flex;
+  justify-content: flex-start; /* changed from 'left' */
+  align-items: flex-start; /* changed from 'left' */
+  align-self: flex-start;
+}
+
+.confirm-btn {
+  background-color: #a3b18a;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 1rem;
+  padding: 1rem;
+  height: 1.2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }

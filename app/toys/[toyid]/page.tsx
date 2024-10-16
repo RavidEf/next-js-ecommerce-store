@@ -6,12 +6,23 @@ import { getToyInsecure } from '../../../database/toysobjects';
 import { notFound } from '../../componenets/notfound';
 import ToyCountForm from './ToyCountForm';
 
-export default async function SingleToyPage(props) {
+type Props = {
+  params: Promise<{
+    toyid: string;
+  }>;
+};
+
+type ToyCookie = {
+  id: number;
+  quantity: string;
+};
+
+export default async function SingleToyPage(props: Props) {
   const toy = await getToyInsecure(Number((await props.params).toyid));
 
   const toysQunatityCookie = (await cookies()).get('cart');
 
-  let toysQunatity = toysQunatityCookie
+  let toysQunatity: ToyCookie[] = toysQunatityCookie
     ? JSON.parse(toysQunatityCookie.value)
     : [];
 

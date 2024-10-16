@@ -5,15 +5,19 @@ import { useState } from 'react';
 // import { dummyObj } from '../../database/toysobjects';
 import CreateOrUpdateCookie from './actions';
 
-export default function ToyCountForm(props) {
+type Props = {
+  toyid: number;
+};
+
+export default function ToyCountForm(props: Props) {
   const [quantity, setQuantity] = useState(1);
   // const itemTotalPrice = quantity * dummyObj.price;
-  function handleIncrement(event) {
+  function handleIncrement(event: React.MouseEvent<HTMLButtonElement>) {
     setQuantity(Number(quantity + 1));
     event.preventDefault();
   }
 
-  function handleDecrement(event) {
+  function handleDecrement(event: React.MouseEvent<HTMLButtonElement>) {
     setQuantity(Number(quantity > 1 ? quantity - 1 : []));
     event.preventDefault();
   }
@@ -51,35 +55,4 @@ export default function ToyCountForm(props) {
       </div>
     </form>
   );
-}
-
-// old form with select
-{
-  /* <input
-          id="quantity"
-          value={quantity}
-          onChange={(event) => {
-            setQuantity(event.currentTarget.value);
-          }}
-        /> */
-}
-{
-  /* <select
-          id="quantity"
-          value={quantity}
-          onChange={(event) => {
-            setQuantity(Number(event.currentTarget.value));
-          }}
-        >
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select> */
 }

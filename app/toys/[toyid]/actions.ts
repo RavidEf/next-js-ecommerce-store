@@ -1,13 +1,21 @@
 'use server';
 import { cookies } from 'next/headers';
 
-export default async function CreateOrUpdateCookie(toyid, quantity) {
+type ToyCookie = {
+  id: number;
+  quantity: string;
+};
+
+export default async function CreateOrUpdateCookie(
+  toyid: number,
+  quantity: string,
+) {
   // 1. get current cookie
   const toyQuantityCookie = (await cookies()).get('cart');
 
   // 2. parse the cookie value (make it an object)
 
-  const toysQuantity = !toyQuantityCookie
+  const toysQuantity: ToyCookie[] = !toyQuantityCookie
     ? []
     : JSON.parse(toyQuantityCookie.value);
 

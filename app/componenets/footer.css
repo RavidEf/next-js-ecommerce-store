@@ -1,0 +1,35 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.footer-container ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  gap: 20px; /* Adds space between all list items */
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Add specific styling for the disclaimer */
+.discplaimer {
+  margin-right: auto; /* Pushes the disclaimer to the left */
+}
+
+/* Group the social media icons together */
+.linkedin,
+.twitter,
+.instagram {
+  margin-left: 10px;
+  transform: translateX(-50%); /* Space between icons */
+}

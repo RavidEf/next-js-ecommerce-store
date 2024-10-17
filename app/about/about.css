@@ -1,3 +1,31 @@
-body {
-  max-width: 700px;
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  margin: 4rem;
+}
+
+.text-about {
+  margin: 1rem;
+}
+.image-about {
+  margin: 1rem;
+}
+.image-fitty {
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    flex-direction: column;
+  }
 }

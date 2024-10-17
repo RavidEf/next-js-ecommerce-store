@@ -1,6 +1,38 @@
+.headlines-home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 .first-row-home {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  /*   gap: 20px;
+ */
   border-radius: 5px;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.cta-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-btn {
+  background-color: #a3b18a;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 1rem;
+  padding: 1rem;
+  height: 1.2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }

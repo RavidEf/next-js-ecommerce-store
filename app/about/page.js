@@ -1,5 +1,6 @@
 import './about.css';
 import Image from 'next/image';
+import { handelClickToToys } from '../componenets/hometocart';
 
 export const metadata = {
   title: 'About',
@@ -39,6 +40,11 @@ export default function AboutPage() {
             paws-itively awesome! We can’t wait to see how much fun your kitties
             have with our toys—share your photos with us, and let’s spread the
             cat love! 😻🎉
+          </p>
+          <p className="cta-btn-container-about">
+            <button className="cta-btn-about" onClick={handelClickToToys}>
+              Shop Toys
+            </button>
           </p>
         </div>
         <div className="image-about">

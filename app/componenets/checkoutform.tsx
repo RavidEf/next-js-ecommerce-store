@@ -1,5 +1,5 @@
 'use client';
-import 'C:/Users/efron/projects/next-js-ecommerce-store/app/cart/checkout/checkoutform.css';
+import '../cart/checkout/checkoutform.css';
 import React from 'react';
 import DeleteAllCookies from './deleteallcookies';
 
@@ -83,7 +83,7 @@ export default function CheckoutForm() {
             inputMode="numeric"
             pattern="[0-9\s]{13,19}"
             autoComplete="cc-number"
-            maxLength="16"
+            maxLength={16}
             placeholder="xxxx xxxx xxxx xxxx"
             required
           />

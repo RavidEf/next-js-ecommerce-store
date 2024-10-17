@@ -1,10 +1,10 @@
 import './footer.css';
-import instagram from 'C:/Users/efron/projects/next-js-ecommerce-store/public/images/instagram-icon.png';
-import linkedin from 'C:/Users/efron/projects/next-js-ecommerce-store/public/images/linkedin-icon.png';
-import twitter from 'C:/Users/efron/projects/next-js-ecommerce-store/public/images/twitter-icon.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import instagram from '../../public/images/instagram-icon.png';
+import linkedin from '../../public/images/linkedin-icon.png';
+import twitter from '../../public/images/twitter-icon.png';
 
 export default function Footer() {
   return (

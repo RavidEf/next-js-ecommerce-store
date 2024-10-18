@@ -9,6 +9,13 @@
   justify-content: space-between; /* Spreads items across the container */
 }
 
+.toys-h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .toys-block {
   border-radius: 20px;
   padding: 1rem;

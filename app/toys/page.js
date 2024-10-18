@@ -15,7 +15,7 @@ export default async function ToysPage() {
 
   return (
     <div>
-      <h1>The full Cattos selection</h1>
+      <h1 className="toys-h1">The full Cattos selection</h1>
       <hr />
       <div className="toys-container">
         {toys.map((toy) => {

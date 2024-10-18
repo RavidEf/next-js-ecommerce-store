@@ -42,6 +42,7 @@ export default async function CartPage() {
       <section>
         <div className="headline-cart">
           <h1>Your basket </h1>
+
           <h3>Here are the items in your basket:</h3>
         </div>
         <div>

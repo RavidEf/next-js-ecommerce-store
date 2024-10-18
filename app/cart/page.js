@@ -89,8 +89,10 @@ export default async function CartPage() {
       </section>
 
       <div>
-        <span data-test-id="cart-total">Cart total: {totalCartPrice}</span>
-        <span>€</span>
+        <h3 data-test-id="cart-total">
+          Cart total: {totalCartPrice}
+          <span>€</span>
+        </h3>
       </div>
     </>
   );

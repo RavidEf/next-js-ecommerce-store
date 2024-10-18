@@ -98,7 +98,7 @@ export async function up(sql: Sql) {
         toys (
           first_name,
           image_name,
-          toydescription,
+          toy_description,
           price
         )
       VALUES

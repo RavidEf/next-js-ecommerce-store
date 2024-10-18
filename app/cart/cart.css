@@ -9,6 +9,10 @@
   border-radius: 20px;
 }
 
+.cart-container:hover {
+  box-shadow: 5px 5px 10px;
+}
+
 .cart-container > img {
   width: 100%;
   height: auto;

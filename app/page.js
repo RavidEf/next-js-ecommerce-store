@@ -9,14 +9,16 @@ export default function Home() {
       <div className="headlines-home">
         <h1>Welcome to the the Cattos store</h1>
         <h2>Your one and only store for cat toys. </h2>
-        <p>Checkout some of our happy customer and their toys below.</p>
+        <p>
+          Checkout some of our happy customers and their <b>toys</b> below.
+        </p>
       </div>
       <p className="cta-btn-container">
         <button className="cta-btn" onClick={handelClickToToys}>
           Shop Toys
         </button>
       </p>
-      <div>
+      <div className="images-row-div">
         <span className="first-row-home">
           <Image
             style={{ borderRadius: 20 }}

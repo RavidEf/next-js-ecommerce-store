@@ -106,7 +106,7 @@ export async function up(sql: Sql) {
           ${toy.firstName},
           ${toy.imageName},
           ${toy.toyDescription},
-          ${toy.price},
+          ${toy.price}
         )
     `;
   }

@@ -16,10 +16,6 @@
   margin-left: 2rem;
 }
 
-.first-row-home > image:hover {
-  box-shadow: 5px 5px 10px;
-}
-
 .cta-btn-container {
   display: flex;
   align-items: center;

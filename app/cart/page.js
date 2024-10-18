@@ -40,8 +40,10 @@ export default async function CartPage() {
   return (
     <>
       <section>
-        <h1>This is the Cart page </h1>
-        <h3>Here are the items in your cart:</h3>
+        <div className="headline-cart">
+          <h1>Your basket </h1>
+          <h3>Here are the items in your basket:</h3>
+        </div>
         <div>
           {filteredToys.map((toy) => {
             const toysCountQuantity = toysQunatity.find(

@@ -5,27 +5,11 @@ primary_region = "otp"
   source = "postgres"
   destination = "/postgres-volume"
 
-[build]
-  # Change the builder to use the official Fly.io buildpack
-  builder = "heroku/buildpacks:20"
-
 [env]
   PORT = "8080"
-  NODE_ENV = "production"
-  HOSTNAME = "0.0.0.0"
-  NEXT_TELEMETRY_DISABLED = "1"
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "suspend"
+  auto_stop_machines = true
   auto_start_machines = true
-  min_machines_running = 0
-
-[[services]]
-  protocol = "tcp"
-  internal_port = 5432
-
-  [[services.ports]]
-    port = 5432
-    handlers = ["pg_tls"]

@@ -48,7 +48,7 @@ export default async function SingleToyPage(props: Props) {
         </h1>
 
         <div className="item-descruption">
-          item description: {toy.description}
+          item description: {toy.toyDescription}
         </div>
         <p className="item-price" data-test-id="product-price">
           Item price: {toy.price}

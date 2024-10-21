@@ -5,7 +5,7 @@ type Toy = {
   id: number;
   firstName: string;
   imageName: string;
-  description: string;
+  toyDescription: string;
   price: number | null;
 };
 

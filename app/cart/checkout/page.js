@@ -42,7 +42,7 @@ export default async function CheckoutPage() {
     <div className="checkout-page">
       <h1>Check-this-out</h1>
       <CheckoutForm />
-      <h3 className="checkout-total">total to be paid: {totalCartPrice} €</h3>
+      <h3 className="checkout-total">Total to be paid: {totalCartPrice} €</h3>
     </div>
   );
 }

@@ -7,7 +7,6 @@ export default function CheckoutForm() {
   async function handelSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
     await DeleteAllCookies();
-
     // Redirect to the thank you page
     window.location.href = '/cart/checkout/thankyou';
   }
@@ -124,7 +123,6 @@ export default function CheckoutForm() {
           <input
             id="security-code"
             data-test-id="checkout-security-code"
-            type="text"
             required
             placeholder="234"
           />

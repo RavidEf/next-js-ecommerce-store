@@ -1,7 +1,6 @@
 import './cart.css';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { getToysInsecure } from '../../database/toysobjects';
 import { calculateTotalCartPrice } from '../../util/combine-product';

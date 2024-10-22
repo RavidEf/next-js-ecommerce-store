@@ -2,12 +2,12 @@
 
 import { cookies } from 'next/headers';
 
-export default async function DeleteAllCookies(toyid, quantity) {
+export default async function DeleteAllCookies(toyid) {
   const toyQuantityCookie = (await cookies()).get('cart');
 
   // 2. parse the cookie value (make it an object)
 
-  let toysQuantity =
+  const toysQuantity =
     toyQuantityCookie && toyQuantityCookie.value
       ? JSON.parse(toyQuantityCookie.value || '[]')
       : [];

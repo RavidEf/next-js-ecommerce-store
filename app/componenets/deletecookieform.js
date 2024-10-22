@@ -1,7 +1,7 @@
 'use client';
 import './remove-item.css';
 import React from 'react';
-import DeleteOneCookie from './deleteonecookie.ts';
+import DeleteOneCookie from './deleteonecookie.js';
 
 export default function DeleteCookieForm({ toyid }) {
   return (
